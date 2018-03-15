@@ -80,7 +80,7 @@ const ponTaskHosts = require('pon-task-hosts')
 ;(async () => {
   let run = pon({
     hosts: ponTaskHosts({
-      'peercdn.com': '\'127.0.0.1\''
+      'peercdn.com': '127.0.0.1'
     })
   })
 
