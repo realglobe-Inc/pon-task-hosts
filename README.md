@@ -79,10 +79,12 @@ const ponTaskHosts = require('pon-task-hosts')
 
 ;(async () => {
   let run = pon({
-    myTask01: ponTaskHosts()
+    hosts: ponTaskHosts({
+      'peercdn.com': '\'127.0.0.1\''
+    })
   })
 
-  run('myTask01')
+  run('hosts')
 }).catch((err) => console.error(err))
 
 ```
@@ -98,12 +100,13 @@ Signatures
 ---------
 
 
-### `define(options) -> function`
+### `define(bindings, options) -> function`
 
 Define task
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| bindings | Object |  Hosts bindings |
 | options | Object |  Optional settings |
 
 
